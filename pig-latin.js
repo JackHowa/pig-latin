@@ -1,4 +1,5 @@
 function translatePigLatin(str) {
+  // check for leading vowel
   const vowelRegex = /([aeiou])/;
   const firstVowelIndex = str.search(vowelRegex);
 
@@ -6,10 +7,16 @@ function translatePigLatin(str) {
     return str + "way";
   }
 
+  // work on consonants
+  let checkForConsonants = false; 
+  while checkForConsonants {
+    
+  }
+  
+
   const consonantsRegex = /([b-df-hj-np-tv-z](.*))/; // list all of the consonants range
 
   const firstConsonantIndex = str.search(consonantsRegex); // 0
-  console.log(firstConsonantIndex);
   const firstConsonant = str.substr(firstConsonantIndex, 1); // c
 
   // now I need to delete the first index
@@ -23,6 +30,6 @@ const singleCons = translatePigLatin("consonant");
 console.log("one vowel:");
 console.log(singleCons); // "aliforniacay"
 
-const noCons = translatePigLatin("eight");
+const leadingVowel = translatePigLatin("eight");
 console.log("empty");
-console.log(noCons); //
+console.log(leadingVowel);
