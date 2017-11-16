@@ -1,9 +1,12 @@
 function translatePigLatin(str) {
-  const splitStr = str.split(""); // [ 'c', 'o', 'n', 's', 'o', 'n', 'a', 'n', 't' ]
   const consonantsRegex = /([b-df-hj-np-tv-z])/; // list all of the consonants range
-  const firstConsonant = str.search(consonantsRegex); // 0 
+  const firstConsonantIndex = str.search(consonantsRegex); // 0
+  const firstConsonant = str.substr(firstConsonantIndex, 1); // c
 
-  
+  // now I need to delete the first index 
+  // also I need to add it to the end - perhaps push 
+
+
 
   return firstConsonant;
 }
