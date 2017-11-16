@@ -1,13 +1,10 @@
 function translatePigLatin(str) {
   const splitStr = str.split(""); // [ 'c', 'o', 'n', 's', 'o', 'n', 'a', 'n', 't' ]
+  const vowelsRegex = /[aeiou]/gi;
 
-  // need to make the match non-greedy 
-  // via https://stackoverflow.com/questions/2503413/regular-expression-to-stop-at-first-match
+  const firstConsonant = str.search(vowelsRegex);
 
-  // this is a string method match though 
-  // and returns an array
-  const firstConsonant = str.match();
-  return splitStr;
+  return firstConsonant;
 }
 
 const output = translatePigLatin("consonant");
