@@ -1,8 +1,9 @@
 function translatePigLatin(str) {
   const splitStr = str.split(""); // [ 'c', 'o', 'n', 's', 'o', 'n', 'a', 'n', 't' ]
-  const vowelsRegex = /[aeiou]/gi;
+  const consonantsRegex = /([b-df-hj-np-tv-z])/; // list all of the consonants range
+  const firstConsonant = str.search(consonantsRegex); // 0 
 
-  const firstConsonant = str.search(vowelsRegex);
+  
 
   return firstConsonant;
 }
